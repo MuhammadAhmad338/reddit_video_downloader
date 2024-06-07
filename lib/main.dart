@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:myfirstflutterproject/Controllers/downloadController.dart';
 import 'package:myfirstflutterproject/Controllers/imageController.dart';
 import 'package:myfirstflutterproject/Controllers/themeController.dart';
 import 'package:myfirstflutterproject/Views/videoScreen.dart';
@@ -14,6 +15,7 @@ void main() async {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => ImageUploadProviderController()),
     ChangeNotifierProvider(create: (_) => ThemeProviderController()),
+    ChangeNotifierProvider(create: (_) => DownloadProviderController())
   ], child: const MyApp()));
 }
 
